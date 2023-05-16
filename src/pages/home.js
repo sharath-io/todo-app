@@ -2,18 +2,17 @@ import { useContext } from "react";
 import { TodoContext } from ".."
 
 export const Home =() =>{
-    const {todoItems, handleMark} = useContext(TodoContext);
+    const {state} = useContext(TodoContext);
 
-    console.log('in home', todoItems);
     return (
         <div>
             <h1>this is done home page</h1>
 
             <ul>
                 {
-                    todoItems.map(({id,title,description,isCompleted}) => <li>
+                    state.todoItems.map(({id,title,description,isCompleted}) => <li>
                         <h3>{title }</h3>
-                        <p>{description} {!isCompleted && <button onClick={()=> handleMark(id)}>Mark as Done</button>}</p>
+                        {/* <p>{description} {isCompleted ? '✅' : <button onClick={()=> handleMark(id)}>Mark as Done</button>}</p> */}
                         </li>)
                 }
             </ul>

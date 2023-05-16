@@ -2,8 +2,8 @@ import { useContext } from "react";
 import { TodoContext } from "..";
 
 export const Done =() =>{
-    const {todoItems} = useContext(TodoContext);
-    const doneTasks = todoItems.filter(({isCompleted}) =>isCompleted);
+    const {state} = useContext(TodoContext);
+    const doneTasks = state.todoItems.filter(({isCompleted}) =>isCompleted);
     
     return (
         <div>

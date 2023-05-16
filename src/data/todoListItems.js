@@ -13,13 +13,13 @@ export const TodoListItems = [
         isCompleted: false
     },
     {
-        id: 1,
+        id: 3,
         title: 'Task 3',
         description: 'this is about task 3',
         isCompleted: true
     },
     {
-        id: 1,
+        id: 4,
         title: 'Task 4',
         description: 'this is about task 4',
         isCompleted: true

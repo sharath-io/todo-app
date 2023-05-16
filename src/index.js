@@ -2,12 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
+import { TodoProvider, TodoContext } from './contexts/todoContext';
+
+export {TodoContext};
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
-     <App />
+      <TodoProvider>
+        <App />
+     </TodoProvider>
     </Router>
   </React.StrictMode>
 );

@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { TodoContext } from "..";
+import  {TodoCard} from '../components/todoCard';
 
 export const NotDone =() =>{
     const {state} = useContext(TodoContext);
@@ -8,14 +9,9 @@ export const NotDone =() =>{
     return (
         <div>
             <h1>this is Not done todos page</h1>
-            <ul>
-                {
-                    NotDoneTasks.map(({title,description}) => <li>
-                        <h3>{title }</h3>
-                        <p>{description}</p>
-                        </li>)
-                }
-            </ul>
+            {
+                    NotDoneTasks.map(item => <TodoCard task={item}/>)
+            }
         </div>
     )
 }

@@ -10,9 +10,14 @@ const reducerFunction = (state,action) =>{
             todoItems:  state.todoItems.map(task => task.id === Number(action.payload)
               ? {...task, isCompleted: !task.isCompleted} : task)
         }
-        default : return 
+        case 'ADD_TASK' : return {
+            todoItems : [...state.todoItems, action.payload]
+        }
+        default : return state;
     }
 }
+
+
 
 export const TodoProvider = ({children}) =>{
 

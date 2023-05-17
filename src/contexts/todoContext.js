@@ -13,6 +13,9 @@ const reducerFunction = (state,action) =>{
         case 'ADD_TASK' : return {
             todoItems : [...state.todoItems, action.payload]
         }
+        case 'REMOVE_TASK' : return {
+            todoItems : state.todoItems.filter(task => task.id !==action.payload)
+        }
         default : return state;
     }
 }

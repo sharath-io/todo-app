@@ -26,6 +26,14 @@ export const UpdateTodos = () =>{
                 </div>
             </label>
             <button onClick={()=> dispatch({type: 'ADD_TASK', payload: {...newTask, id: state.todoItems.length+1, isCompleted: false}})}>Add Task</button>
+
+            <ul>
+                {
+                    state.todoItems.map(({title, id}) => <li>
+                        <p>{title} <button onClick={()=> dispatch({type:'REMOVE_TASK', payload: id})}>REMOVE TASK</button></p>
+                        </li>)
+                }
+            </ul>
         </div>
     )
 }

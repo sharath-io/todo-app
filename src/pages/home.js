@@ -6,7 +6,7 @@ export const Home =() =>{
 
     return (
         <div>
-            <h1>this is done home page</h1>
+            <h1>Tasks in the list</h1>
                 {
                     state.todoItems.map(item => <TodoCard task={item}/>)
                 }

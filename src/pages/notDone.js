@@ -8,7 +8,7 @@ export const NotDone =() =>{
 
     return (
         <div>
-            <h1>this is Not done todos page</h1>
+            <h1>Tasks Not done : {NotDoneTasks.length}</h1>
             {
                     NotDoneTasks.map(item => <TodoCard task={item}/>)
             }

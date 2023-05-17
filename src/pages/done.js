@@ -9,7 +9,7 @@ export const Done =() =>{
     
     return (
         <div>
-            <h1>this is done todos page</h1>
+            <h1>Tasks Done : {doneTasks.length}</h1>
             {
                     doneTasks.map(item => <TodoCard task={item}/>)
             }
